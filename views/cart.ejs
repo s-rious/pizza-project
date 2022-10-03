@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cart - C&T Pizza</title>
+</head>
+<%- include('layouts/nav'); -%>
+
+    <body>
+        <div id="container">
+            <div id="content">
+            <form action="/search" method="post">
+                <label for="search">Search:</label>
+                <input type="text" id="search" name="search" placeholder="Enter search query...">
+                <div class="search-checkbox" id="searchquery">
+                    <input type="radio" id="uname" name="searchquery" value="uname" required />
+                    <label for="uname">Name</label>
+                    <input type="radio" id="address" name="searchquery" value="address" required />
+                    <label for="address">Address</label>
+                    <input type="radio" id="size" name="searchquery" value="size" required />
+                    <label for="size">Size</label>
+                </div>
+                <button>Search</button>
+            </form>
+            </div>
+        </div>
+        <% for (let foundcarts of foundcart) { %>
+            <div id="order-header">
+                <p>Order For <%= foundcarts.uname%>
+                </p>
+            </div>
+            <div id="order">
+                <p id="name">Name: <%= foundcarts.uname %>
+                </p>
+                <p id="address">Address: <%= foundcarts.address %>
+                </p>
+                <p id="size">Size: <%= foundcarts.size %>
+                </p>
+                <p id="mod">Modifiers: <%= foundcarts.modifier%>
+                </p>
+                <p id="drinks">Drinks: <%= foundcarts.drinks %>
+                </p>
+                <p id="sides">Sides: <%= foundcarts.sides %>
+                </p>
+                <p id="dips">Dips: <%= foundcarts.dips %>
+                </p>
+                <p id="requests">Requests: <%= foundcarts.requests %>
+                </p>
+                <div id="button-content">
+                    <a href="/cart/edit/<%= foundcarts._id %>" style="text-decoration: none; color: black;">
+                        <button>Edit</button>
+                    </a>
+                    <form action="/cart/delete/<%= foundcarts._id %>" method="post">
+                        <button>Delete</button>
+                    </form>
+                </div>
+            </div>
+            <% } %>
+    </body>
+    <%- include('layouts/footer'); -%>
+        <%- include('layouts/script'); -%>
+
+</html>

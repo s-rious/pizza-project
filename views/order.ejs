@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Order Page - C&T Pizza</title>
+</head>
+<%- include('layouts/nav'); -%>
+    <body>
+        <form method="POST">
+                <div id="container">
+                    <label for="uname">Name</label>
+                    <input type="text" name="uname" id="uname" placeholder="Enter name..." required>
+
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address" placeholder="Enter your address...">
+
+                    <label for="size">Size</label>
+                    <select name="size" id="size" required>
+                        <option value="none" selected disabled hidden>Select a size</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="X-Large">X-Large</option>
+                    </select>
+
+                    <label for="mod">Modifiers</label>
+                    <div class="order-checkbox" id="mod">
+                        <input type="checkbox" id="redsauce" name="mod" value="Red Sauce" />
+                        <label for="redsauce">Red Sauce</label>
+                        <input type="checkbox" id="whitesauce" name="mod" value="White Sauce" />
+                        <label for="whitesauce">White Sauce</label>
+                        <input type="checkbox" id="pepperoni" name="mod" value="Pepperoni" />
+                        <label for="pepperoni">Pepperoni</label>
+                        <input type="checkbox" id="sausage" name="mod" value="Sausage" />
+                        <label for="sausage">Sausage</label>
+                        <input type="checkbox" id="bacon" name="mod" value="Bacon" />
+                        <label for="bacon">Bacon</label>
+                        <input type="checkbox" id="pineapple" name="mod" value="Pineapple" />
+                        <label for="pineapple">Pineapple</label>
+                    </div>
+
+                    <label for="drinks">Drinks</label>
+                    <div class="order-checkbox" id="drinks">
+                        <input type="checkbox" id="coke" name="drinks" value="Coke" />
+                        <label for="coke">Coke</label>
+                        <input type="checkbox" id="fanta" name="drinks" value="Fanta" />
+                        <label for="fanta">Fanta</label>
+                        <input type="checkbox" id="sprite" name="drinks" value="Sprite" />
+                        <label for="sprite">Sprite</label>
+                        <input type="checkbox" id="mug" name="drinks" value="Mug" />
+                        <label for="mug">Mug</label>
+                        <input type="checkbox" id="brisk" name="drinks" value="Brisk" />
+                        <label for="brisk">Brisk Ice Tea</label>
+                        <input type="checkbox" id="mntdew" name="drinks" value="Mountain Dew" />
+                        <label for="mntdew">Mountain Dew</label>
+                    </div>
+
+                    <label for="sides">Sides</label>
+                    <div class="order-checkbox" id="sides">
+                        <input type="checkbox" id="wings" name="sides" value="Wings" />
+                        <label for="wings">Wings</label>
+                        <input type="checkbox" id="breadsticks" name="sides" value="Breadsticks" />
+                        <label for="breadsticks">Breadsticks</label>
+                        <input type="checkbox" id="garlicbread" name="sides" value="Garlic Bread" />
+                        <label for="garlicbread">Garlic Bread</label>
+                        <input type="checkbox" id="mozarellasticks" name="sides" value="Mozarella Sticks" />
+                        <label for="mozarellasticks">Mozarella Sticks</label>
+                        <input type="checkbox" id="cheesecurds" name="sides" value="Cheesecurds" />
+                        <label for="cheesecurds">Cheese Curds</label>
+                        <input type="checkbox" id="fries" name="sides" value="Fries" />
+                        <label for="fries">Fries</label>
+                    </div>
+
+
+                    <label for="sides">Dips</label>
+                    <div class="order-checkbox" id="sides">
+                        <input type="checkbox" id="ranch" name="dips" value="Ranch" />
+                        <label for="ranch">Ranch</label>
+                        <input type="checkbox" id="marinara" name="dips" value="Marinara" />
+                        <label for="marinara">Marinara</label>
+                    </div>
+
+                    <label for="requests">Requests</label>
+                    <textarea name="requests" id="requests" placeholder="Enter special requests" required></textarea>
+
+                    <input type="submit" formaction="/formsub">
+                </div>
+        </form>
+    </body>
+    <%- include('layouts/footer'); -%>
+    <%- include('layouts/script'); -%>
+</html>

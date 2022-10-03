@@ -1,0 +1,141 @@
+/*General*/
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
+}
+#content {
+  text-align: center;
+}
+#header-content {
+  height: 50vh;
+  width: 80vw;
+  background-image: url("/assets/homeimg - c&t.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#header-text {
+  color: white;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Navbar*/
+#mainNav {
+  padding: 0px;
+  margin-top: -1.1vw;
+}
+#nav-body {
+  margin: 0px;
+  background-color: #F4F9E9;
+}
+.nav-item {
+  list-style: none;
+  margin: 0px 15px;
+  font-size: 20px;
+}
+#ul-1{
+  display: flex;
+  width: 97%;
+  align-items: center;
+  background-color: #b4b8ab;
+  padding: 10px;
+}
+#items {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.nav-links {
+  text-decoration: none;
+  color: #153243;
+  background-color: #b4b8ab;
+}
+.nav-links:hover{
+  color: #EEF0EB;
+}
+nav {
+  background-color: #b4b8ab;
+  padding: 10px;   
+}
+.highlight-text {
+  color: white;
+}
+#nav-img {
+  width: 100px;
+  justify-items: left;
+}
+
+/*Footer*/
+#footer {
+  text-align: center;
+  background-color: #284B63;
+  padding: 5px;
+  color: #F4F9E9;
+  margin-top: 10%;
+}
+#footer-links {
+  display: flex;
+  justify-content: center;
+}
+#footer-links a {
+  margin: 0px 10px;
+  text-decoration: none;
+  color: #bfc4b5;
+}
+#footer-links a:hover {
+  color: #153243;
+}
+
+/*Order Page*/
+#order {
+  margin: auto;
+  background-color: rgb(200, 200, 200);
+  text-align: center;
+  width: 40%;
+  padding: 0.3vh 0;
+}
+#order-header {
+  margin: 2vh auto -1vh auto;
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 40%;
+  padding: 0.3vh 0px;
+}
+
+/*Cart Page*/
+#button-content {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+#button-content form, button {
+  margin: 0vh 0.5vh;
+}
+
+/*Edit Page*/
+#edit {
+  margin: auto;
+  background-color: rgb(200, 200, 200);
+  text-align: center;
+  width: 40%;
+  padding: 0.3vh 0;
+}
+#editform {
+  display: flex;
+  flex-direction: column;
+  padding: 0vh 1vh;
+}
+#edit-header {
+  margin: 2vh auto -1vh auto;
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 40%;
+  padding: 0.3vh 0px;
+}
